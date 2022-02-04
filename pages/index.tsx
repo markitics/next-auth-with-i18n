@@ -6,7 +6,10 @@ export default function IndexPage() {
       <h1>NextAuth.js Example</h1>
       <p>
         This is an example site to demonstrate how to use{" "}
-        <a href="https://next-auth.js.org">NextAuth.js</a> for authentication.
+        <a href="https://next-auth.js.org">NextAuth.js</a> for authentication
+        with{" "}
+        <a href="https://www.npmjs.com/package/next-i18next">next-i18next</a>{" "}
+        for i18n.
       </p>
     </Layout>
   )
