@@ -15,6 +15,12 @@ export default function Header() {
         <style>{`.nojs-show { opacity: 1; top: 0; }`}</style>
       </noscript>
       <div className={styles.signedInStatus}>
+        <div style={{ padding: "4px" }}>
+          `user` is {session ? JSON.stringify(session.user) : "not signed in."}
+        </div>
+        <div style={{ padding: "4px" }}>
+          `loading` is {loading ? "true" : "false"}.
+        </div>
         <p
           className={`nojs-show ${
             !session && loading ? styles.loading : styles.loaded
