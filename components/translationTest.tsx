@@ -6,14 +6,19 @@ const TranslationTestContent = ({ mood, usesAwait }) => {
   const { data: session, status } = useSession()
 
   return (
-    <div>
-      The word for "world" is {t("world")}. The user is:{" "}
-      {session?.user ? (
-        <strong>{session.user.email ?? session.user.name}</strong>
-      ) : (
-        "null or undefined"
-      )}
-    </div>
+    <>
+      <p style={{ marginBottom: "20px" }}>
+        The word for "world" is <strong>{t("world")}</strong>.
+      </p>
+      <p>
+        The user is:{" "}
+        {session?.user ? (
+          <strong>{session.user.email ?? session.user.name}</strong>
+        ) : (
+          "null or undefined"
+        )}
+      </p>
+    </>
   )
 }
 

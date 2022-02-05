@@ -70,7 +70,14 @@ export default function Header() {
           )}
         </p>
       </div>
-      <nav>
+      <nav
+        style={{
+          background: "#eee",
+          borderRadius: "8px",
+          padding: "16px",
+          marginTop: "8px",
+        }}
+      >
         <ul className={styles.navItems}>
           <li className={styles.navItem}>
             <Link href="/">
@@ -105,6 +112,25 @@ export default function Header() {
           <li className={styles.navItem}>
             <Link href="/me">
               <a>Me</a>
+            </Link>
+          </li>
+        </ul>
+        <ul className={styles.navItems}>
+          <div></div>
+          Translation test:{" "}
+          <li className={styles.navItem}>
+            <Link href="/with-await" locale="en">
+              <a>/en</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/with-await" locale="de">
+              <a>/de</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/no-await" locale="de">
+              <a>/de (no `await`)</a>
             </Link>
           </li>
         </ul>
