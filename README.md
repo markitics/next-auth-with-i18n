@@ -61,3 +61,21 @@ export default TestPage
 ```
 
 I added .env to allow login with Github, but login isn't necessary for the demo. The point is we see `await` is required for translation to work on pages with `getServerSideProps`, but either way, `useSession()` still works: `loading` is not stuck on `true`.
+
+## User appears logged out
+
+After signing in, I can click any of the following links:  
+[https://www.dropbox.com/s/1sc7khsp9yz9sar/signed%20in%20routes.png?dl=0](https://www.dropbox.com/s/1sc7khsp9yz9sar/signed%20in%20routes.png?dl=0)  
+<img src="https://www.dropbox.com/s/1sc7khsp9yz9sar/signed%20in%20routes.png?dl=1" width="300">
+
+However, if I click one of the "translation" links (with `serverSideTranslations`), the user appears logged out.  
+[https://www.dropbox.com/s/pn99b2818eqs6i4/translation%20routes.png?dl=0](https://www.dropbox.com/s/pn99b2818eqs6i4/translation%20routes.png?dl=0)  
+<img src="https://www.dropbox.com/s/pn99b2818eqs6i4/translation%20routes.png?dl=1" width="300">  
+Note: I'm not actually logged out; if I simply refresh the page I appear logged in again (no need to click "Sign in").
+
+Gif:  
+<img src="https://www.dropbox.com/s/4oe8dskwb5s9ypu/translations-log-out.gif?dl=1" width="300">  
+[https://www.dropbox.com/s/4oe8dskwb5s9ypu/translations-log-out.gif?dl=0](https://www.dropbox.com/s/4oe8dskwb5s9ypu/translations-log-out.gif?dl=0)
+
+Video:
+[https://www.dropbox.com/s/qdhi7580zuzqe7r/translations-routes-appear-logged-out.mov?dl=0](https://www.dropbox.com/s/qdhi7580zuzqe7r/translations-routes-appear-logged-out.mov?dl=0)

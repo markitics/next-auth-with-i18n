@@ -7,7 +7,7 @@ import "./styles.css"
 // `useSession()` anywhere in your application to access the `session` object.
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <SessionProvider session={pageProps.session} refetchInterval={0}>
+    <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
       <Component {...pageProps} />
     </SessionProvider>
   )
